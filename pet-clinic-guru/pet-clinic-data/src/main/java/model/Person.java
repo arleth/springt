@@ -1,4 +1,4 @@
-package net.arleth.petclinic.model;
+package model;
 
 public class Person {
     public String getFirsName() {
