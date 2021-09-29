@@ -14,7 +14,7 @@
     </parent>
     <groupId>net.arleth</groupId>
     <artifactId>guru-pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>guru-pet-clinic</name>
     <description>guru-pet-clinic</description>
     <properties>
@@ -68,6 +68,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/arleth/springt.git</developerConnection>
-      <tag>guru-pet-clinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 </project>
