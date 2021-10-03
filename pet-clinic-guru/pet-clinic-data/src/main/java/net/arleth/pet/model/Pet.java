@@ -1,4 +1,4 @@
-package model;
+package net.arleth.pet.model;
 
 import java.time.LocalDate;
 
