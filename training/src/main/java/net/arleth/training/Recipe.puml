@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Recipe {
+  description: String
+  prepTime: Integer
+  cookTime: Integer
+  servings: Integer
+  source: String
+  url: String
+  directions: String
+  difficulty: Difficulty
+  image: byte[]
+}
+
+class Category {
+  categoryName: String not null
+}
+
+class Ingredient {
+  description: String
+  amount: BigDecimal
+}
+
+class UnitOfMeasure {
+  uom: String
+}
+
+class Notes {
+  notes String
+}
+
+enum Difficulty {
+  EASY
+  MODERATE
+  HARD
+}
+Recipe --> Difficulty
+Recipe "1" *-- "1" Notes : notes
+Recipe *-- "1.*" Ingredient : recipe
+Ingredient o-- "1" UnitOfMeasure : unitOfMeasure
+Recipe "0.*" --> "0.*" Category: recipe(category)
+@enduml
