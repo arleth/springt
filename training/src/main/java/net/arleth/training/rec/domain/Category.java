@@ -4,7 +4,9 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "CATEGORY")
 public class Category {
+    public static final String TABLE_NAME = "'CATEGORY'";
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

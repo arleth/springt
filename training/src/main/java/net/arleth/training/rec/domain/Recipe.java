@@ -1,6 +1,7 @@
 package net.arleth.training.rec.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -126,10 +127,31 @@ public class Recipe {
     }
 
     public Set<Category> getCategories() {
+        if(this.categories == null) {
+            this.categories = new HashSet<>();
+        }
         return categories;
     }
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+    public void addCategory(Category category){
+        getCategories().add(category);
+    }
+
+    public Set<Ingredient> getIngredients() {
+        if (this.ingredients == null) {
+            this.ingredients = new HashSet<>();
+        }
+        return this.ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public void addIngredient(Ingredient ingredient) {
+        getIngredients().add(ingredient);
     }
 }
