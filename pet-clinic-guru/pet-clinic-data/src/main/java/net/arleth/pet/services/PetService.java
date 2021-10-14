@@ -5,8 +5,6 @@ import net.arleth.pet.model.Pet;
 
 import java.util.Set;
 
-public interface PetService {
-    Pet findById(Long id);
-    Pet save(Pet pet);
-    Set<Pet> findAll();
+public interface PetService<T extends Pet, ID extends Long> extends CrudService<T, ID>{
+
 }
