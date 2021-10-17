@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController {
     @RequestMapping({"/", "", "/index", "/index.html"})
-    public String petIndex(Model model) {
-        System.out.println(" >>>>>>>> HEEEEY <<<<<<<<");
+    public String petClinicIndex(Model model) {
         log.info("Asking IndexController for stuff");
         model.addAttribute("welcome", "Velkommen - could be localized");
-        log.info("put the welcome text");
+        log.info("IndexController put the welcome text");
         return "index";
     }
 
