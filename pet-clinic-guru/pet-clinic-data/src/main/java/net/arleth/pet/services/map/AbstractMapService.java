@@ -2,8 +2,10 @@ package net.arleth.pet.services.map;
 
 import net.arleth.pet.services.CrudService;
 
-import java.util.*;
-import java.util.function.Predicate;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public abstract class AbstractMapService<T, ID> implements CrudService<T, ID> {
     protected Map<ID, T> map = new HashMap<>();
