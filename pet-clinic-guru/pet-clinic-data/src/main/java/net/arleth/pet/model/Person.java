@@ -1,14 +1,20 @@
 package net.arleth.pet.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import java.io.Serial;
+
+@MappedSuperclass
 public class Person extends BaseEntity {
+    @Serial
     private static final long serialVersionUID = -4274238564320485159L;
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firsName) {
+        this.firstName = firsName;
     }
 
     public String getLastName() {
@@ -19,6 +25,9 @@ public class Person extends BaseEntity {
         this.lastName = lastName;
     }
 
-    private String firsName;
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
 }

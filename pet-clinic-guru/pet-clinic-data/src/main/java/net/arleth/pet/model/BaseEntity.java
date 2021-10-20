@@ -4,10 +4,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import java.io.Serial;
 import java.io.Serializable;
 
 @MappedSuperclass
 public class BaseEntity implements Serializable {
+    @Serial
     private static final long serialVersionUID = -7227986900235030780L;
 
     @Id
